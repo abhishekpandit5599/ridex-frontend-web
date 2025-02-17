@@ -43,14 +43,15 @@ export default function Referral() {
               initial={{ opacity: 0, scale: 0.9 }}
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className="h-full"
             >
-              <Card>
-                <CardContent className="pt-6">
+              <Card className="h-full flex flex-col">
+                <CardContent className="pt-6 flex flex-col flex-grow">
                   <div className="rounded-full bg-primary/10 p-3 w-12 h-12 flex items-center justify-center mb-4">
                     <benefit.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{benefit.title}</h3>
-                  <p className="text-gray-600">{benefit.description}</p>
+                  <p className="text-gray-600 flex-grow">{benefit.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
