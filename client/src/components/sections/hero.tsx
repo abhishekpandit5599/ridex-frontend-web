@@ -24,7 +24,7 @@ export default function Hero() {
               <Button size="lg" className="gap-2">
                 Download App <ArrowRight className="h-5 w-5" />
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" href="/drive">
                 Become a Driver
               </Button>
             </div>
@@ -37,8 +37,8 @@ export default function Hero() {
             className="relative h-[400px]"
           >
             <img
-              src="https://images.unsplash.com/photo-1517935967841-d3574ae7f8ab"
-              alt="Urban Mobility"
+              src="https://images.unsplash.com/photo-1590674899484-d5640e854abe"
+              alt="RideX App in Action"
               className="rounded-lg shadow-xl object-cover w-full h-full"
             />
           </motion.div>

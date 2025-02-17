@@ -13,8 +13,8 @@ export default function Download() {
             transition={{ duration: 0.5 }}
           >
             <img
-              src="https://images.unsplash.com/photo-1495695911455-19054a55f92f"
-              alt="Download App"
+              src="https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c"
+              alt="RideX Mobile App"
               className="rounded-lg shadow-xl"
             />
           </motion.div>

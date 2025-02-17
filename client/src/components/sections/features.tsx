@@ -7,25 +7,21 @@ const features = [
     icon: Car,
     title: "Quick Pickup",
     description: "Get a ride within minutes of booking. Our smart algorithms match you with the nearest available driver to minimize waiting time.",
-    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop"
   },
   {
     icon: Shield,
     title: "Safe Travel",
     description: "Travel with peace of mind knowing all our drivers are verified and trips are tracked in real-time. We prioritize your safety at every step of the journey.",
-    image: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?w=800&auto=format&fit=crop"
   },
   {
     icon: Clock,
     title: "24/7 Service",
     description: "Need a ride at 3 AM? We've got you covered! Our service runs round the clock, ensuring you're never stranded. With drivers available at all hours and dedicated customer support, we're always here when you need us.",
-    image: "https://images.unsplash.com/photo-1616012760010-8c5ff5b9f4e6?w=800&auto=format&fit=crop"
   },
   {
     icon: Wallet,
     title: "Best Rates",
     description: "Enjoy competitive pricing with no hidden charges. Our transparent fare system ensures you always know what you're paying for.",
-    image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?w=800&auto=format&fit=crop"
   },
 ];
 
@@ -47,17 +43,10 @@ export default function Features() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              className={`h-full ${index === 2 ? 'lg:row-span-2' : ''}`}
+              className="h-full"
             >
-              <Card className="h-full">
-                <CardContent className="pt-6 flex flex-col h-full">
-                  <div className="mb-6">
-                    <img 
-                      src={feature.image} 
-                      alt={feature.title}
-                      className="w-full h-48 object-cover rounded-lg"
-                    />
-                  </div>
+              <Card className="h-full flex flex-col">
+                <CardContent className="pt-6 flex flex-col flex-grow">
                   <div className="rounded-full bg-primary/10 p-3 w-12 h-12 flex items-center justify-center mb-4">
                     <feature.icon className="h-6 w-6 text-primary" />
                   </div>

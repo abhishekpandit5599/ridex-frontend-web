@@ -16,7 +16,7 @@ const benefits = [
   {
     icon: CreditCard,
     title: "First Ride Bonus",
-    description: "Special discount on your first ride",
+    description: "Your referred friends get a special discount on their first ride",
   },
   {
     icon: Percent,
