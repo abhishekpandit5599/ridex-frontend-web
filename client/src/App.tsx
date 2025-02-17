@@ -7,6 +7,8 @@ import Home from "@/pages/home";
 import About from "@/pages/about";
 import Privacy from "@/pages/privacy";
 import Terms from "@/pages/terms";
+import Drive from "@/pages/drive";
+import Help from "@/pages/help";
 import Navbar from "@/components/layout/navbar";
 import Footer from "@/components/layout/footer";
 
@@ -20,6 +22,8 @@ function Router() {
           <Route path="/about" component={About} />
           <Route path="/privacy" component={Privacy} />
           <Route path="/terms" component={Terms} />
+          <Route path="/drive" component={Drive} />
+          <Route path="/help" component={Help} />
           <Route component={NotFound} />
         </Switch>
       </main>

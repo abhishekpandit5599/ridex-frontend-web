@@ -6,28 +6,32 @@ const features = [
   {
     icon: Car,
     title: "Quick Pickup",
-    description: "Get a ride within minutes of booking",
+    description: "Get a ride within minutes of booking. Our smart algorithms match you with the nearest available driver to minimize waiting time.",
+    image: "https://images.unsplash.com/photo-1449965408869-eaa3f722e40d?w=800&auto=format&fit=crop"
   },
   {
     icon: Shield,
     title: "Safe Travel",
-    description: "Verified drivers and real-time trip tracking",
+    description: "Travel with peace of mind knowing all our drivers are verified and trips are tracked in real-time. We prioritize your safety at every step of the journey.",
+    image: "https://images.unsplash.com/photo-1573152958734-1922c188fba3?w=800&auto=format&fit=crop"
   },
   {
     icon: Clock,
     title: "24/7 Service",
-    description: "Available round the clock for your convenience",
+    description: "Need a ride at 3 AM? We've got you covered! Our service runs round the clock, ensuring you're never stranded. With drivers available at all hours and dedicated customer support, we're always here when you need us.",
+    image: "https://images.unsplash.com/photo-1616012760010-8c5ff5b9f4e6?w=800&auto=format&fit=crop"
   },
   {
     icon: Wallet,
     title: "Best Rates",
-    description: "Competitive pricing with no hidden charges",
+    description: "Enjoy competitive pricing with no hidden charges. Our transparent fare system ensures you always know what you're paying for.",
+    image: "https://images.unsplash.com/photo-1580519542036-c47de6196ba5?w=800&auto=format&fit=crop"
   },
 ];
 
 export default function Features() {
   return (
-    <section className="py-16">
+    <section className="py-16 bg-gray-50">
       <div className="container mx-auto px-4">
         <div className="text-center mb-12">
           <h2 className="text-3xl font-bold mb-4">Why Choose RideX</h2>
@@ -43,14 +47,22 @@ export default function Features() {
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
+              className={`h-full ${index === 2 ? 'lg:row-span-2' : ''}`}
             >
-              <Card>
-                <CardContent className="pt-6">
+              <Card className="h-full">
+                <CardContent className="pt-6 flex flex-col h-full">
+                  <div className="mb-6">
+                    <img 
+                      src={feature.image} 
+                      alt={feature.title}
+                      className="w-full h-48 object-cover rounded-lg"
+                    />
+                  </div>
                   <div className="rounded-full bg-primary/10 p-3 w-12 h-12 flex items-center justify-center mb-4">
                     <feature.icon className="h-6 w-6 text-primary" />
                   </div>
                   <h3 className="font-semibold text-lg mb-2">{feature.title}</h3>
-                  <p className="text-gray-600">{feature.description}</p>
+                  <p className="text-gray-600 flex-grow">{feature.description}</p>
                 </CardContent>
               </Card>
             </motion.div>
